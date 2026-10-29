@@ -70,8 +70,8 @@ with tab1:
     with col1:
         st.subheader("1. Person Image")
         use_sample_person = st.checkbox("Use sample person image", value=True)
-        if use_sample_person and os.path.exists("test_person.jpg"):
-            person_img_path = "test_person.jpg"
+        if use_sample_person and os.path.exists("data/sample_tryon/person.jpg"):
+            person_img_path = "data/sample_tryon/person.jpg"
             st.image(person_img_path, caption="Sample Person", width=250)
         else:
             uploaded_person = st.file_uploader("Upload Person Photo", type=["jpg", "jpeg", "png"], key="person")
@@ -86,8 +86,8 @@ with tab1:
     with col2:
         st.subheader("2. Garment Image")
         use_sample_cloth = st.checkbox("Use sample garment image", value=True)
-        if use_sample_cloth and os.path.exists("test_cloth.jpg"):
-            cloth_img_path = "test_cloth.jpg"
+        if use_sample_cloth and os.path.exists("data/sample_tryon/garment.jpg"):
+            cloth_img_path = "data/sample_tryon/garment.jpg"
             st.image(cloth_img_path, caption="Sample Garment", width=250)
         else:
             uploaded_cloth = st.file_uploader("Upload Garment Photo", type=["jpg", "jpeg", "png"], key="cloth")
@@ -174,8 +174,8 @@ with tab3:
     img_col1, img_col2 = st.columns([1, 2])
     with img_col1:
         use_sample_search_img = st.checkbox("Use sample search image", value=True, key="search_sample")
-        if use_sample_search_img and os.path.exists("test_cloth.jpg"):
-            search_img_path = "test_cloth.jpg"
+        if use_sample_search_img and os.path.exists("data/sample_tryon/garment.jpg"):
+            search_img_path = "data/sample_tryon/garment.jpg"
             st.image(search_img_path, caption="Query Image", width=220)
         else:
             uploaded_search_img = st.file_uploader("Upload clothing image", type=["jpg", "png", "jpeg"], key="img_search")

@@ -44,9 +44,9 @@ def test_search():
         print(f"  Match {i+1}: {meta.get('productDisplayName')} (Score: {match['score']:.2f})")
 
     # 2. Image Search
-    if os.path.exists("test_cloth.jpg"):
-        print("\n[Image Query] Searching with 'test_cloth.jpg'...")
-        input_img = Image.open('test_cloth.jpg').convert('RGB').resize((224, 224))
+    if os.path.exists("data/sample_tryon/garment.jpg"):
+        print("\n[Image Query] Searching with 'data/sample_tryon/garment.jpg'...")
+        input_img = Image.open('data/sample_tryon/garment.jpg').convert('RGB').resize((224, 224))
         img_vec = model.encode(input_img, convert_to_tensor=True).cpu().tolist()
         img_res = index.query(top_k=2, vector=img_vec, include_metadata=True)
         for i, match in enumerate(img_res['matches']):
@@ -59,7 +59,7 @@ def test_vton():
     print("=" * 60)
     from gradio_client import Client, handle_file
 
-    if not os.path.exists("test_person.jpg") or not os.path.exists("test_cloth.jpg"):
+    if not os.path.exists("data/sample_tryon/person.jpg") or not os.path.exists("data/sample_tryon/garment.jpg"):
         print("[!] Sample images not found. Skipping VTON test.")
         return
 
@@ -68,8 +68,8 @@ def test_vton():
     print("[*] Submitting test try-on job (person + garment)...")
     start = time.time()
     result = client.predict(
-        dict={"background": handle_file("test_person.jpg"), "layers": [], "composite": None},
-        garm_img=handle_file("test_cloth.jpg"),
+        dict={"background": handle_file("data/sample_tryon/person.jpg"), "layers": [], "composite": None},
+        garm_img=handle_file("data/sample_tryon/garment.jpg"),
         garment_des="A stylish white garment",
         is_checked=True,
         is_checked_crop=False,
