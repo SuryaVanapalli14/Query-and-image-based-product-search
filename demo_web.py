@@ -11,7 +11,7 @@ from gradio_client import Client as GradioClient, handle_file
 
 # Set Streamlit page config
 st.set_page_config(
-    page_title="VogueAI — Multimodal Fashion & Virtual Try-On",
+    page_title="Query and Image based product search and Virtual TryOn",
     page_icon="✨",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -182,7 +182,7 @@ st.markdown("""
 st.markdown("""
 <div class="hero-banner">
     <div class="hero-badge">Enterprise AI Fashion Intelligence</div>
-    <div class="hero-title">Multimodal Catalog Search & Virtual Try-On Studio</div>
+    <div class="hero-title">Query and Image based product search and Virtual TryOn</div>
     <div class="hero-subtitle">
         Accelerating fashion e-commerce discovery through <b>OpenAI CLIP cross-modal vector embeddings</b> 
         and <b>IDM-VTON generative diffusion modeling</b>.

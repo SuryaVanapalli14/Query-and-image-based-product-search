@@ -29,3 +29,7 @@ Thumbs.db
 .vscode/
 .idea/
 
+
+# Questionnaire & Temporary Docs
+questions/
+*.docx

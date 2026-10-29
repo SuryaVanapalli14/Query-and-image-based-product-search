@@ -187,3 +187,4 @@ A key engineering decision in this project is the **Hybrid Edge-Cloud Architectu
    * Click **Run Virtual Try-On**.
    * While the 30-second progress spinner runs, explain the IDM-VTON diffusion and human parsing architecture to the panel.
    * When the synthesized result displays, highlight the natural folds, shoulder fit, and collar alignment.
+
