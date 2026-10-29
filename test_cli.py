@@ -64,7 +64,7 @@ def test_vton():
         return
 
     print("[*] Connecting to Hugging Face space 'Nymbo/Virtual-Try-On'...")
-    client = Client("Nymbo/Virtual-Try-On")
+    client = Client("Nymbo/Virtual-Try-On", token=os.getenv("HF_TOKEN"))
     print("[*] Submitting test try-on job (person + garment)...")
     start = time.time()
     result = client.predict(

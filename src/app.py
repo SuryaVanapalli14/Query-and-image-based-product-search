@@ -28,7 +28,7 @@ TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN", "")
 client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN) if (TWILIO_ACCOUNT_SID and TWILIO_AUTH_TOKEN) else None
 
 # Gradio Client for Virtual Try-On API
-gradio_client = GradioClient("Nymbo/Virtual-Try-On")
+gradio_client = GradioClient("Nymbo/Virtual-Try-On", token=os.getenv("HF_TOKEN"))
 
 # Ngrok URL
 NGROK_URL = os.getenv("NGROK_URL", "").rstrip("/")

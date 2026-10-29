@@ -44,7 +44,7 @@ def init_search_resources():
 
 @st.cache_resource(show_spinner="Connecting to Virtual Try-On API (Hugging Face)...")
 def init_tryon_client():
-    return GradioClient("Nymbo/Virtual-Try-On")
+    return GradioClient("Nymbo/Virtual-Try-On", token=os.getenv("HF_TOKEN"))
 
 # Initialize models
 try:
