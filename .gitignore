@@ -1,0 +1,30 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables & Secrets
+.env
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Temporary test & runtime media
+test_person.jpg
+test_cloth.jpg
+test_search_result.png
+test_img_search_result.png
+temp_*.jpg
+temp_*.png
+static/*.png
+static/*.jpg
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
